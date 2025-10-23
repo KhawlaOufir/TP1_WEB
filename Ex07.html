@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 7</title>
+</html>
+<body>
+<form action="" method="get" name="Formulaire d'inscription avance">
+    <fieldset>
+    <legend>"Formulaire d'inscription avancé"</legend>
+
+    <!--Informations personnelles-->
+    <legend>Identite</legend>
+    <label for="name" name="name">Nom</label>
+    <input type="text" id="name" placeholder="Votre nom"><br><br>
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom"><br><br>
+    <label for="date_de_naissance">Date de naissance</label>
+    <input type="date" name="date_de_naissance" id="date_de_naissance" min="1990-01-01" max="<?php echo date( 'Y-m-d'): ?>"><br><br>
+    </fieldset>
+
+    <!--Informations de contact-->
+    <fieldset>
+    <legend>Contact</legend>
+    <label for="telephone">Telephone</label>
+    <input type="tel" id="telephone" name="telephone" placeholder="Votre numero de telephone" pattern="^0[5-7]\d{8}$" title="Le numero doit commencer par 05, 06 ou 07 et contenir 10 chiffres."><br><br>
+    <label for="site_personnel">Site personnel</label>
+    <input type="url" id="site_personnel" name="site_personnel" placeholder="Votre site personnel"><br><br>
+    </fieldset>
+
+    <!--Informations de securite-->
+    <fieldset>
+    <legend>Security</legend>
+    <label for="password">Mot de passe</label>
+    <input type="password" id="password" name="password" placeholder="Votre mot de passe" maxlength="8"><br><br>g
+    <label for="confirm_password">Confirmer le mot de passe</label>
+    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmer votre mot de passe" maxlength="8"><br><br>
+    </fieldset>
+
+    <!--Preferences-->
+    <fieldset>
+    <legend>Preferences</legend>
+    <label for="newsletter">S'abonner à la newsletter</label>
+     <input type="checkbox" id="newsletter" name="newsletter"><br><br>
+    <span>Role</span><br>
+    <input id="etudiant" value="Etudiant" name="role" type="radio">
+    <label for="etudiant">Etudiant</label><br>
+    <input id="professionnel"  name="role" type="radio" value="Professionnel">Progessionnel<br>
+    </fieldset>
+
+    <!--Envoyer les informations-->
+    <button type="submit">Envoyer</button>
+    </fieldset>
+</form>
